@@ -33,7 +33,7 @@ export class DialogBoxComponent implements OnInit {
   // close modal
   close(): void {
     this.element.style.display = 'none';
-    document.body.classList.remove('dialog-box-open ');
+    document.body.classList.remove('dialog-box-open');
   }
 
   closeModal() {
