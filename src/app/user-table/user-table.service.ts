@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { dummyData } from './dummy-data-enum';
+import { dummyData } from './dummy-data.enum';
 
 @Injectable({
   providedIn: 'root'

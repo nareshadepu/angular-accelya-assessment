@@ -1,3 +1,55 @@
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
 p {
-  font-family: Lato;
+  margin: 0;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 12px 35px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  font-family: 'Raleway', sans-serif;
+  background: #00a3e0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.button:hover,
+.hs-button:hover,
+input[type='submit']:hover {
+  color: #fff;
+  background: #425563;
+  text-decoration: none;
+}
+
+.button.dark-blue {
+  background: #001871;
 }
