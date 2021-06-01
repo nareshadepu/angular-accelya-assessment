@@ -1,1 +1,13 @@
-<app-user-table></app-user-table>
+<div class="dialog-box" [ngClass]="modalHeightWidth || ''">
+  <div class="dialog-box-body">
+    <div class="header">
+      <span class="close" (click)="closeModal();">&times;</span>
+      {{header}}
+      <ng-content select="header"></ng-content>
+    </div>
+    <div class="content">
+      <app-user-table></app-user-table>
+    </div>
+  </div>
+</div>
+<div class="dialog-box-background"></div>

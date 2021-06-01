@@ -1,15 +1,50 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  OnDestroy,
+  ViewEncapsulation
+} from '@angular/core';
+
+import { DialogBoxService } from './dialog-box.service';
 
 @Component({
-  selector: 'app-dialog-box',
+  selector: 'dialog-box',
   templateUrl: './dialog-box.component.html',
   styleUrls: ['./dialog-box.component.css']
 })
 export class DialogBoxComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  @Input() id: string;
+  @Input() header: string;
+  @Input() modalHeightWidth: any;
+  @Input() gridCustomClass: string;
+  @Input() quickFilter: boolean;
+  @Input() columnDefs: object;
+  @Input() rowData: object;
+  element: any;
+  gridApi: any;
+  gridColumnApi: any;
+  searchValue: string;
+  constructor(private modalService: DialogBoxService, private el: ElementRef) {
+    this.element = el.nativeElement;
+  }
+  // close modal
+  close(): void {
+    this.element.style.display = 'none';
+    document.body.classList.remove('poc-modal-open');
   }
 
+  closeModal() {
+    this.modalService.close(this.element.id);
+  }
+
+  ngOnDestroy(): void {
+    this.modalService.remove(this.id);
+    this.element.remove();
+  }
+
+  ngOnInit(): void {
+    this.modalService.add(this);
+  }
 }

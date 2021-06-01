@@ -1,0 +1,74 @@
+dialog-box {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: none;
+}
+dialog-box .ag-theme-alpine .ag-row-selected {
+  background-color: white;
+  font-weight: bolder;
+}
+dialog-box .ag-theme-alpine .ag-header {
+  background-color: white;
+}
+dialog-box .dialog-box {
+  color: #031b72;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+dialog-box .dialog-box .dialog-box-body {
+  background: #fff;
+  margin: 40px;
+}
+dialog-box .dialog-box .dialog-box-body .header {
+  padding: 11px 16px 16px 16px;
+  background-color: #bdc3c9;
+  height: 10px;
+}
+dialog-box .dialog-box .dialog-box-body .footer {
+  background-color: #ebedef;
+}
+dialog-box .dialog-box .close {
+  color: #fff;
+  float: right;
+  font-weight: bold;
+}
+dialog-box .dialog-box .close:hover,
+dialog-box .dialog-box .close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+dialog-box .dialog-box-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.75;
+  z-index: 900;
+}
+dialog-box .filter-text-box {
+  background: url(find.png) no-repeat;
+  padding: 2px 18px 2px 18px;
+  width: -webkit-fill-available;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+dialog-box .right {
+  text-align: right;
+}
+dialog-box .button {
+  border: none;
+  color: white;
+  padding: 7px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
