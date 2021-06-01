@@ -41,7 +41,7 @@
     Showing {{p}} to {{pageSize}} of {{total}} rows
     <select  (change)="onChange($event)">
       <option *ngFor="let opt of totalItems" [value]="opt" >{{opt}}</option>
-    </select>
+    </select> records per page
   </div>
   <div class="pagination">
     <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>

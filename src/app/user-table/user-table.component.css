@@ -279,3 +279,10 @@
   /* Firefox 18- */
   font-size: 15px;
 }
+
+select {
+  background: #ddd;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+}
