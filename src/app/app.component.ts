@@ -17,6 +17,5 @@ export class AppComponent implements OnInit {
 
   openModal(id: string) {
     this.modalService.open(id);
-    console.log(id);
   }
 }
