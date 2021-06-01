@@ -18,7 +18,7 @@ export class UserTableComponent implements OnInit {
   ngOnInit(): void {
     this.HttpService.getData().subscribe((response: any) => {
       this.userData = response;
-      console.log(this.userData);
+      // console.log(this.userData);
     });
   }
 
