@@ -13,7 +13,9 @@
   <table cellpadding="0" cellspacing="0" class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th width="5%" class="text-center"> <input type="checkbox" class="form-check-input"></th>
+        <th width="5%">
+          <input type="checkbox" [checked]="isAllCheckBoxChecked()" (change)="checkAllCheckBox($event)" class="form-check-input">
+        </th>
         <th width="10%">Item ID</th>
         <th width="35%" (click)="sort('id')">Product Name <i class="fa fa-caret-down cursor"></i></th>
         <th>Actual Price</th>
@@ -27,7 +29,7 @@
      | orderBy: key: reverse
      | paginate: {itemsPerPage: pageSize, currentPage: p, totalItems: total } 
      | filter:productName">
-        <th> <input type="checkbox" class="form-check-input"></th>
+        <th> <input type="checkbox"  class="form-check-input"></th>
         <td>{{ data.itemId }}</td>
         <td>{{ data.productName }}</td>
         <td>{{ data.actualPrice }}</td>

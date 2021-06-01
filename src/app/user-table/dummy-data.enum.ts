@@ -4,6 +4,7 @@ export class dummyData {
   actualPrice: number;
   discountPrice: number;
   stockAvailable: number;
+  checked?: boolean;
 
   constructor(itemId, productName, actualPrice, discountPrice, stockAvailable) {
     this.itemId = itemId;

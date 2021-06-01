@@ -35,4 +35,13 @@ export class UserTableComponent implements OnInit {
     this.pageSize = event.target.value;
     console.log(event.target.value);
   }
+
+  checkAllCheckBox(ev) {
+    this.userData.forEach(x => (x.checked = ev.target.checked));
+    console.log(ev.target.checked);
+  }
+
+  isAllCheckBoxChecked() {
+    return this.userData.every(p => p.checked);
+  }
 }
