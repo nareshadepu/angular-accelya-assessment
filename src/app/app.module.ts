@@ -8,8 +8,13 @@ import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { UserTableComponent } from './user-table/user-table.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, DialogBoxComponent, UserTableComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    DialogBoxComponent,
+    UserTableComponent
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
