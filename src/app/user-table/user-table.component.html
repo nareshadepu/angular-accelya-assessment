@@ -1,49 +1,51 @@
-<div class="btn-toolbar" role="toolbar">
-  <div class="btn-group">
-    <input type="text" [(ngModel)]="productName"   class="form-input filter" placeholder="Search">
-  </div>
-  <div class="btn-group ml-5px">
-    <button><i class="fa fa-sync"></i></button>
-    <button><i class="fa fa-list-alt"></i></button>
-    <button><i class="fa fa-th"></i> <span class="caret"></span></button>
-  </div>
+<div class="container">
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group">
+      <input type="text" [(ngModel)]="productName"   class="form-input filter" placeholder="Search">
+    </div>
+    <div class="btn-group ml-5px">
+      <button><i class="fa fa-sync"></i></button>
+      <button><i class="fa fa-list-alt"></i></button>
+      <button><i class="fa fa-th"></i> <span class="caret"></span></button>
+    </div>
 
-</div>
-<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered">
-  <thead>
-    <tr>
-      <th> <input type="checkbox" class="form-check-input"></th>
-      <th width="10%">Item ID</th>
-      <th width="35%" (click)="sort('id')">Product Name <i class="fa fa-caret-down cursor"></i></th>
-      <th>Actual Price</th>
-      <th>Discount Price</th>
-      <th width="20%">Stock Available</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- [ngStyle]="{'background': getRandomColor()}" -->
-    <tr *ngFor="let data of userData
+  </div>
+  <table cellpadding="0" cellspacing="0" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th width="5%" class="text-center"> <input type="checkbox" class="form-check-input"></th>
+        <th width="10%">Item ID</th>
+        <th width="35%" (click)="sort('id')">Product Name <i class="fa fa-caret-down cursor"></i></th>
+        <th>Actual Price</th>
+        <th>Discount Price</th>
+        <th width="20%">Stock Available</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- [ngStyle]="{'background': getRandomColor()}" -->
+      <tr *ngFor="let data of userData
      | orderBy: key: reverse
      | paginate: {itemsPerPage: pageSize, currentPage: p, totalItems: total } 
      | filter:productName">
-      <th> <input type="checkbox" class="form-check-input"></th>
-      <td>{{ data.itemId }}</td>
-      <td>{{ data.productName }}</td>
-      <td>{{ data.actualPrice }}</td>
-      <td>{{ data.discountPrice }}</td>
-      <td>{{ data.stockAvailable }}</td>
-    </tr>
-  </tbody>
+        <th> <input type="checkbox" class="form-check-input"></th>
+        <td>{{ data.itemId }}</td>
+        <td>{{ data.productName }}</td>
+        <td>{{ data.actualPrice }}</td>
+        <td>{{ data.discountPrice }}</td>
+        <td>{{ data.stockAvailable }}</td>
+      </tr>
+    </tbody>
 
-</table>
-<div class="footer">
-  <div class="table-records">
-    Showing {{p}} to {{pageSize}} of {{total}} rows
-    <select  (change)="onChange($event)">
+  </table>
+  <div class="footer">
+    <div class="table-records">
+      Showing {{p}} to {{pageSize}} of {{total}} rows
+      <select  (change)="onChange($event)">
       <option *ngFor="let opt of totalItems" [value]="opt" >{{opt}}</option>
     </select> records per page
-  </div>
-  <div class="pagination">
-    <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>
+    </div>
+    <div class="pagination">
+      <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>
+    </div>
   </div>
 </div>
