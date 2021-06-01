@@ -21,7 +21,7 @@ export class DialogBoxComponent implements OnInit {
   @Input() header: string;
   @Input() modalHeightWidth: any;
   @Input() gridCustomClass: string;
-  @Input() quickFilter: boolean;
+  @Input() searchFilter: boolean;
   @Input() columnDefs: object;
   @Input() rowData: object;
   element: any;

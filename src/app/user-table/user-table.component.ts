@@ -32,7 +32,7 @@ export class UserTableComponent implements OnInit {
   }
 
   onChange(event) {
-    this.pageSize = event.target.value
+    this.pageSize = event.target.value;
     console.log(event.target.value);
   }
 }

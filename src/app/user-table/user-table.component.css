@@ -253,7 +253,6 @@
   margin-left: 5px;
   vertical-align: middle;
   border-top: 4px dashed;
-  border-top: 4px solid\9;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
@@ -285,4 +284,7 @@ select {
   padding: 8px;
   border: none;
   border-radius: 3px;
+}
+.cursor {
+  cursor: pointer;
 }

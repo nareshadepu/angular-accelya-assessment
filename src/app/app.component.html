@@ -1,5 +1,6 @@
 <button type="button"  id="dialog-1" (click)="openModal('dialog-1')"  class="button dark-blue">View Table</button>
-<dialog-box id="dialog-1">
+
+<dialog-box id="dialog-1" [header]="'Table Heading'" [searchFilter]="false">
 </dialog-box>
 
 

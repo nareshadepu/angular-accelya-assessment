@@ -1,6 +1,6 @@
 <div class="btn-toolbar" role="toolbar">
   <div class="btn-group">
-    <input type="text" [(ngModel)]="productName" class="form-input filter" placeholder="Search">
+    <input type="text" [(ngModel)]="productName"   class="form-input filter" placeholder="Search">
   </div>
   <div class="btn-group ml-5px">
     <button><i class="fa fa-sync"></i></button>
@@ -14,7 +14,7 @@
     <tr>
       <th width="5%"> <input type="checkbox" class="form-check-input"></th>
       <th width="10%">Item ID</th>
-      <th width="35%" (click)="sort('id')">Product Name <i class="fa fa-caret-down"></i></th>
+      <th width="35%" (click)="sort('id')">Product Name <i class="fa fa-caret-down cursor"></i></th>
       <th>Actual Price</th>
       <th>Discount Price</th>
       <th width="20%">Stock Available</th>
@@ -23,7 +23,7 @@
   <tbody>
     <!-- [ngStyle]="{'background': getRandomColor()}" -->
     <tr *ngFor="let data of userData
-     | orderBy: key: !reverse
+     | orderBy: key: reverse
      | paginate: {itemsPerPage: pageSize, currentPage: p, totalItems: total } 
      | filter:productName">
       <th> <input type="checkbox" class="form-check-input"></th>
