@@ -13,7 +13,8 @@ import { DialogBoxService } from './dialog-box.service';
 @Component({
   selector: 'dialog-box',
   templateUrl: './dialog-box.component.html',
-  styleUrls: ['./dialog-box.component.scss']
+  styleUrls: ['./dialog-box.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class DialogBoxComponent implements OnInit {
   @Input() id: string;
