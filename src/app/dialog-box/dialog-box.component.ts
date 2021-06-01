@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 
 import { DialogBoxService } from './dialog-box.service';
+// import { dummyData } from '../user-table/dummy-data.enum';
 
 @Component({
   selector: 'dialog-box',
