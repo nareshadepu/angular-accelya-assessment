@@ -24,7 +24,7 @@
     <!-- [ngStyle]="{'background': getRandomColor()}" -->
     <tr *ngFor="let data of userData
      | orderBy: key: !reverse
-     | paginate: {itemsPerPage: 10, currentPage: p } 
+     | paginate: {itemsPerPage: pageSize, currentPage: p, totalItems: total } 
      | filter:productName">
       <th> <input type="checkbox" class="form-check-input"></th>
       <td>{{ data.itemId }}</td>
@@ -38,7 +38,10 @@
 </table>
 <div class="footer">
   <div class="table-records">
-    Showing 1 to 10 of 39 rows
+    Showing {{p}} to {{pageSize}} of {{total}} rows
+    <select  (change)="onChange($event)">
+      <option *ngFor="let opt of totalItems" [value]="opt" >{{opt}}</option>
+    </select>
   </div>
   <div class="pagination">
     <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>

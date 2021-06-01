@@ -13,11 +13,15 @@ export class UserTableComponent implements OnInit {
   key: string = 'id';
   reverse: boolean = false;
   p: number = 1;
+  total: number;
+  pageSize: number = 10;
+  totalItems = [10, 20, 30, 50, 100];
   constructor(private HttpService: UserTableService) {}
 
   ngOnInit(): void {
     this.HttpService.getData().subscribe((response: any) => {
       this.userData = response;
+      this.total = response.length;
       // console.log(this.userData);
     });
   }
@@ -25,5 +29,10 @@ export class UserTableComponent implements OnInit {
   sort(key) {
     this.key = key;
     this.reverse = !this.reverse;
+  }
+
+  onChange(event) {
+    this.pageSize = event.target.value
+    console.log(event.target.value);
   }
 }
