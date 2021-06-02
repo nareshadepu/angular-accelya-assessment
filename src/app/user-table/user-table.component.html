@@ -1,6 +1,6 @@
 <div class="container">
   <div class="btn-toolbar" role="toolbar">
-    <div class="btn-group">
+    <div class="btn-group" *ngIf="searchFilter">
       <input type="text" [(ngModel)]="productName"   class="form-input filter" placeholder="Search">
     </div>
     <div class="btn-group ml-5px">
@@ -27,10 +27,9 @@
     </thead>
     <tbody>
       <!-- [ngStyle]="{'background': getRandomColor()}" -->
-      <tr *ngFor="let data of userData
-     | orderBy: key: reverse
+      <tr *ngFor="let data of userData | orderBy: key: reverse
      | paginate: {itemsPerPage: pageSize, currentPage: p, totalItems: total} 
-     | filter:productName">
+     | filter:productName" [ngClass]="{'highlight' : data.itemId == 157}">
         <th> <input type="checkbox"  class="form-check-input"></th>
         <td>{{ data.itemId }}</td>
         <td>{{ data.productName }}</td>
@@ -41,7 +40,7 @@
     </tbody>
 
   </table>
-  <div class="footer">
+  <div class="footer" *ngIf="footer">
     <div class="table-records">
       Showing {{p}} to {{pageSize}} of {{total}} rows
       <select  (change)="onChange($event)">

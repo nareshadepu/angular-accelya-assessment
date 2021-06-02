@@ -4,7 +4,9 @@ import {
   Input,
   OnInit,
   OnDestroy,
-  ViewEncapsulation
+  ViewEncapsulation,
+  Output,
+  EventEmitter
 } from '@angular/core';
 
 import { DialogBoxService } from './dialog-box.service';
@@ -20,10 +22,14 @@ export class DialogBoxComponent implements OnInit {
   @Input() id: string;
   @Input() header: string;
   @Input() modalHeightWidth: any;
-  @Input() gridCustomClass: string;
   @Input() searchFilter: boolean;
-  @Input() columnDefs: object;
-  @Input() rowData: object;
+  @Input() sourceData: any;
+  @Input() gridCustomWidth: any;
+  @Input() footer: any;
+
+  //@Output() testVariable = new EventEmitter();
+  testVariable: EventEmitter<any> = new EventEmitter();
+
   element: any;
   gridApi: any;
   gridColumnApi: any;
