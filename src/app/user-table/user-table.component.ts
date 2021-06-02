@@ -28,11 +28,10 @@ export class UserTableComponent implements OnInit {
   constructor(private HttpService: UserTableService) {}
 
   ngOnInit(): void {
-    this.HttpService.getData().subscribe((response: any) => {
+    this.HttpService.getData(this.getSourceData).subscribe((response: any) => {
       this.userData = response;
       this.total = response.length;
     });
-    this.HttpService.getSourceData(this.getSourceData);
   }
 
   sort(key) {

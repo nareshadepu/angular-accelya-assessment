@@ -1,17 +1,7 @@
 <div class="container">
   <button type="button"  id="dialog-1" (click)="openModal('dialog-1')"  class="button dark-blue">View Table</button>
 </div>
-
-
 <dialog-box id="dialog-1" [gridCustomWidth]="'900px'"
-  [sourceData]="'https://raw.githubusercontent.com/nareshadepu/mock-data/main/mock-data.json'" [header]="'PSL'"
-  [searchFilter]="true" [footer]="true">
+  [sourceData]="'https://raw.githubusercontent.com/nareshadepu/mock-data/main/mock-data.json'"
+  [header]="'Table Heading'" [searchFilter]="true" [footer]="true">
 </dialog-box>
-
-
-<!-- <dialog-box id="dialog-1" 
-[gridCustomWidth]="'grid-width'" 
-[header]="'Dialog Box Tittle'" 
-[sourceData]="userData"
-[searchFilter]="true">
-</dialog-box> -->

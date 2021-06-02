@@ -14,16 +14,8 @@ export class UserTableService {
     console.log(this.getSourceDataUrl);
   }
 
-  //dataSource = this.getSourceDataUrl;
-
-  getData() {
-    //if (this.getSourceDataUrl) {
-    return this._http.get<dummyData[]>(
-      'https://raw.githubusercontent.com/nareshadepu/mock-data/main/mock-data.json'
-    );
-    //  }
-    // return { is_not_usuario_inventiva: true };
+  getData(url) {
+    return this._http.get<dummyData[]>(url);
   }
-
   //https://raw.githubusercontent.com/nareshadepu/mock-data/main/mock-data.json
 }

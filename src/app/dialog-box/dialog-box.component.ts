@@ -10,7 +10,6 @@ import {
 } from '@angular/core';
 
 import { DialogBoxService } from './dialog-box.service';
-// import { dummyData } from '../user-table/dummy-data.enum';
 
 @Component({
   selector: 'dialog-box',
@@ -27,7 +26,6 @@ export class DialogBoxComponent implements OnInit {
   @Input() gridCustomWidth: any;
   @Input() footer: any;
 
-  //@Output() testVariable = new EventEmitter();
   testVariable: EventEmitter<any> = new EventEmitter();
 
   element: any;
@@ -37,7 +35,7 @@ export class DialogBoxComponent implements OnInit {
   constructor(private modalService: DialogBoxService, private el: ElementRef) {
     this.element = el.nativeElement;
   }
-  // close modal
+
   close(): void {
     this.element.style.display = 'none';
     document.body.classList.remove('dialog-box-open');

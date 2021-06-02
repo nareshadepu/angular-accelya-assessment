@@ -50,11 +50,6 @@
   border-top-right-radius: 5px;
 }
 
-/* .table-bordered th,
-.table-bordered td {
-  border: 1px solid #dddddd;
-} */
-
 .table-bordered thead th,
 .table-bordered thead td {
   border-bottom-width: 2px;
