@@ -329,6 +329,10 @@ select {
   padding: 6px 14px 6px 14px;
 }
 
+.pagination ::ng-deep .ngx-pagination .pagination-next.disabled {
+  padding: 6px 14px 6px 14px;
+}
+
 .pagination ::ng-deep .ngx-pagination .current {
   background: none;
   color: #333333;
