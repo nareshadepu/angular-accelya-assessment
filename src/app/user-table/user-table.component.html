@@ -25,7 +25,8 @@
     <tbody>
       <tr *ngFor="let data of userData | orderBy: key: reverse
      | paginate: {itemsPerPage: pageSize, currentPage: p, totalItems: total} 
-     | filter:productName; index as i" [ngClass]="{'highlight' : data.itemId == 157}">
+     | filter:productName; index as i"
+        [ngClass]="{'table-primary' : data.itemId == 157, 'table-info' : data.itemId == 128, 'table-warning' : data.itemId == 159, 'table-secondary' : data.itemId == 163, 'table-danger' : data.itemId == 178}">
         <th> <input type="checkbox" [checked]="userData[i].checked"  class="form-check-input"></th>
         <td>{{ data.itemId }}</td>
         <td>{{ data.productName }}</td>

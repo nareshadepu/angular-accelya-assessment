@@ -158,6 +158,36 @@
   border: 0;
 }
 
+.table .table-primary,
+.table-primary > td,
+.table-primary > th {
+  background-color: #dff0d8;
+}
+
+.table .table-info,
+.table-info > td,
+.table-info > th {
+  background-color: #d9edf7;
+}
+
+.table .table-warning,
+.table-warning > td,
+.table-warning > th {
+  background-color: #fcf8e3;
+}
+
+.table .table-secondary,
+.table-secondary > td,
+.table-secondary > th {
+  background-color: #f5f5f5;
+}
+
+.table .table-danger,
+.table-danger > td,
+.table-danger > th {
+  background-color: #f2dede;
+}
+
 .form-container {
   margin-bottom: 1rem;
 }
@@ -203,12 +233,6 @@
   margin-bottom: 10px;
   float: right;
 }
-/* .btn-group {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: middle;
-} */
 
 .filter {
   width: 160px;
@@ -280,6 +304,9 @@ select {
 }
 .pagination ::ng-deep .ngx-pagination {
   margin-top: 0px;
+}
+.pagination ::ng-deep .ngx-pagination .ellipsis {
+  display: none;
 }
 .pagination ::ng-deep .ngx-pagination li {
   border: 1px solid #ddd; /* Gray */
