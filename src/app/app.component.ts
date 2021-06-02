@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+;import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { DialogBoxService } from './dialog-box/dialog-box.service';
 // import userData from './dummy-data.json';
 

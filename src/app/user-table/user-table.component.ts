@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UserTableService } from './user-table.service';
 import { dummyData } from './dummy-data.enum';
 
@@ -13,9 +13,13 @@ export class UserTableComponent implements OnInit {
   key: string = 'id';
   reverse: boolean = false;
   p: number = 1;
-  total: number;
+  total: any;
   pageSize: number = 10;
   totalItems = [10, 20, 30, 50, 100];
+  @Input() id: string;
+  @Input() maxSize: number;
+  @Output() pageChange: EventEmitter<number>;
+  @Output() pageBoundsCorrection: EventEmitter<number>;
   constructor(private HttpService: UserTableService) {}
 
   ngOnInit(): void {

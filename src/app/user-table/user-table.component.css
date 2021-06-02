@@ -1,7 +1,7 @@
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -298,4 +298,53 @@ select {
 .container {
   max-height: 550px;
   overflow: auto;
+}
+.pagination ::ng-deep .ngx-pagination {
+  margin-top: 0px;
+}
+.pagination ::ng-deep .ngx-pagination li {
+  border: 1px solid #ddd; /* Gray */
+  margin: 0px;
+  padding: 3px;
+}
+/* .pagination ::ng-deep .ngx-pagination .pagination-previous {
+  padding: 3px !important;
+} */
+
+.pagination ::ng-deep .ngx-pagination li:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 6px 14px 6px 14px;
+}
+
+.pagination ::ng-deep .ngx-pagination li:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.pagination ::ng-deep .ngx-pagination .current {
+  background: none;
+  color: #333333;
+  padding: 6px 12px 6px 12px;
+}
+.pagination ::ng-deep .ngx-pagination a,
+.ngx-pagination button {
+  color: #2199e8;
+}
+
+.pagination ::ng-deep .ngx-pagination a,
+.ngx-pagination button:hover {
+  background: none;
+}
+
+.footer {
+  display: flex;
+}
+.pagination {
+  width: 50%;
+  text-align: right;
+}
+.table-records {
+  width: 50%;
+  text-align: left;
 }
