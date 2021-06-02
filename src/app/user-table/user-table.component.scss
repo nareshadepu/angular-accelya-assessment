@@ -317,12 +317,16 @@ select {
 .pagination ::ng-deep .ngx-pagination li:first-child {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  padding: 6px 14px 6px 14px;
+  // padding: 6px 14px 6px 14px;
 }
 
 .pagination ::ng-deep .ngx-pagination li:last-child {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+
+.pagination ::ng-deep .ngx-pagination .pagination-previous.disabled {
+  padding: 6px 14px 6px 14px;
 }
 
 .pagination ::ng-deep .ngx-pagination .current {

@@ -19,7 +19,7 @@ import { DialogBoxService } from './dialog-box.service';
 })
 export class DialogBoxComponent implements OnInit {
   @Input() id: string;
-  @Input() header: string;
+  @Input() headerTitle: string;
   @Input() modalHeightWidth: any;
   @Input() searchFilter: boolean;
   @Input() sourceData: any;

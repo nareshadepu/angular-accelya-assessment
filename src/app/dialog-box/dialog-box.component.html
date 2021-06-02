@@ -2,8 +2,8 @@
   <div class="dialog-box-body">
     <div class="header">
       <span class="close" (click)="closeModal();">&times;</span>
-      {{header}}
-      <ng-content select="header"></ng-content>
+      {{headerTitle}}
+      <ng-content select="headerTitle"></ng-content>
     </div>
     <div class="content">
       <app-user-table [getSourceData]="sourceData" [searchFilter]="searchFilter" [footer]="footer"></app-user-table>
