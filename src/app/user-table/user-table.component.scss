@@ -138,25 +138,9 @@
   background-color: #ebcccc;
 }
 
-.thead-inverse th {
-  color: #fff;
-  background-color: #292b2c;
-}
-
 .thead-default th {
   color: #464a4c;
   background-color: #dddddd;
-}
-
-.table-inverse {
-  color: #fff;
-  background-color: #292b2c;
-}
-
-.table-inverse th,
-.table-inverse td,
-.table-inverse thead th {
-  border-color: #fff;
 }
 
 .table-inverse.table-bordered {
@@ -302,9 +286,6 @@ select {
   margin: 0px;
   padding: 3px;
 }
-/* .pagination ::ng-deep .ngx-pagination .pagination-previous {
-  padding: 3px !important;
-} */
 
 .pagination ::ng-deep .ngx-pagination li:first-child {
   border-top-left-radius: 3px;
@@ -336,10 +317,10 @@ select {
   display: flex;
 }
 .pagination {
-  width: 50%;
+  width: 55%;
   text-align: right;
 }
 .table-records {
-  width: 50%;
+  width: 45%;
   text-align: left;
 }

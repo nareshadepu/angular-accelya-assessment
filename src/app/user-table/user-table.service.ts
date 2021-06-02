@@ -17,5 +17,4 @@ export class UserTableService {
   getData(url) {
     return this._http.get<dummyData[]>(url);
   }
-  //https://raw.githubusercontent.com/nareshadepu/mock-data/main/mock-data.json
 }
