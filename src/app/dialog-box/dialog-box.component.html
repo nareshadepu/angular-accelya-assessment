@@ -1,9 +1,8 @@
-<div class="dialog-box" [ngStyle]="{ 'width': gridCustomWidth }" [ngClass]="modalHeightWidth || ''">
+<div class="dialog-box" [ngStyle]="{ 'width': gridCustomWidth }">
   <div class="dialog-box-body">
     <div class="header">
       <span class="close" (click)="closeModal();">&times;</span>
       {{headerTitle}}
-      <ng-content select="headerTitle"></ng-content>
     </div>
     <div class="content">
       <app-user-table [getSourceData]="sourceData" [searchFilter]="searchFilter" [footer]="footer"></app-user-table>

@@ -38,7 +38,7 @@ export class DialogBoxComponent implements OnInit {
 
   close(): void {
     this.element.style.display = 'none';
-    document.body.classList.remove('dialog-box-open');
+    // document.body.classList.remove('dialog-box-open');
   }
 
   closeModal() {
@@ -56,6 +56,6 @@ export class DialogBoxComponent implements OnInit {
 
   open(): void {
     this.element.style.display = 'block';
-    document.body.classList.add('dialog-box-open');
+    // document.body.classList.add('dialog-box-open');
   }
 }
