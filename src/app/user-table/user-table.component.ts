@@ -19,12 +19,8 @@ export class UserTableComponent implements OnInit {
   @Input() public getSourceData: string;
   @Input() searchFilter: boolean;
   @Input() footer: boolean;
-
   @Input() id: string;
   @Input() maxSize: number;
-  @Output() pageChange: EventEmitter<number>;
-  @Output() pageBoundsCorrection: EventEmitter<number>;
-  someUrl: string;
   constructor(private HttpService: UserTableService) {}
 
   ngOnInit(): void {
@@ -41,15 +37,13 @@ export class UserTableComponent implements OnInit {
 
   onChange(event) {
     this.pageSize = event.target.value;
-    console.log(event.target.value);
   }
 
   checkAllCheckBox(ev) {
     this.userData.forEach(x => (x.checked = ev.target.checked));
-    console.log(ev.target.checked);
   }
 
   isAllCheckBoxChecked() {
-    return this.userData.every(p => p.checked);
+    return this.userData.every(checkBox => checkBox.checked);
   }
 }
