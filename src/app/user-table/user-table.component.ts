@@ -20,7 +20,7 @@ export class UserTableComponent implements OnInit {
   @Input() searchFilter: boolean;
   @Input() footer: boolean;
   @Input() id: string;
-  @Input() maxSize: number;
+  //@Input() maxSize: number;
   constructor(private HttpService: UserTableService) {}
 
   ngOnInit(): void {
